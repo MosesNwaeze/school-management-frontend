@@ -1,0 +1,33 @@
+.sticky-header,
+.menu-bar {
+  background: #4f2587 !important;
+}
+/* 
+.active {
+  padding: 30px 12px;
+}
+.active a {
+  color: #fff !important;
+}
+.active :hover{
+    color: #F5B105 !important;
+}
+
+.menu-links .nav > li > span a{
+    padding: 0;
+    display: inline-block;
+} */
+
+
+
+.home-link:hover::after{
+    content: "";
+    width: 10px;
+    height: 10px;
+    background: none !important;
+    top: 85%;
+    position: absolute;
+    left: 30px;
+    transform: rotate(45deg);
+    z-index: -1001 !important;
+}

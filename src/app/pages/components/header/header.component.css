@@ -1,0 +1,8 @@
+.home-link:hover {
+  color: #f5b105 !important;
+}
+.home-link {
+  color: #fff !important;
+  padding: 28px 12px;
+  margin-top: 5rem;
+}

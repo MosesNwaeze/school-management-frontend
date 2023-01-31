@@ -1,13 +1,334 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Dashboards</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-</head>
-<body>
-  <app-root></app-root>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <title>Dashboards</title>
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- META ============================================= -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+    <meta name="robots" content="" />
+
+    <!-- DESCRIPTION -->
+    <meta name="description" content="EduChamp : Education HTML Template" />
+
+    <!-- OG -->
+    <meta property="og:title" content="EduChamp : Education HTML Template" />
+    <meta
+      property="og:description"
+      content="EduChamp : Education HTML Template"
+    />
+    <meta property="og:image" content="" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <!-- FAVICONS ICON ============================================= -->
+    <link rel="icon" href="./app/pages/components/error-page/error-page.component.html" type="image/x-icon" />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="assets/images/favicon.png"
+    />
+
+    <!-- PAGE TITLE HERE ============================================= -->
+    <title>EduChamp : Education HTML Template</title>
+
+    <!-- MOBILE SPECIFIC ============================================= -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!--[if lt IE 9]>
+      <script src="assets/js/html5shiv.min.js"></script>
+      <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- All PLUGINS CSS ============================================= -->
+    <link rel="stylesheet" type="text/css" href="assets/css/assets.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="assets/vendors/calendar/fullcalendar.css"
+    />
+
+    <!-- TYPOGRAPHY ============================================= -->
+    <link rel="stylesheet" type="text/css" href="assets/css/typography.css" />
+
+    <!-- SHORTCODES ============================================= -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="assets/css/shortcodes/shortcodes.css"
+    />
+
+    <!-- STYLESHEETS ============================================= -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/dashboard.css" />
+    <link
+      class="skin"
+      rel="stylesheet"
+      type="text/css"
+      href="assets/css/color/color-1.css"
+    />
+    <!-- All PLUGINS CSS ============================================= -->
+    <link rel="stylesheet" type="text/css" href="assets/pages/css/assets.css" />
+
+    <!-- TYPOGRAPHY ============================================= -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="assets/pages/css/typography.css"
+    />
+
+    <!-- SHORTCODES ============================================= -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="assets/pages/css/shortcodes/shortcodes.css"
+    />
+
+    <!-- STYLESHEETS ============================================= -->
+    <link rel="stylesheet" type="text/css" href="assets/pages/css/style.css" />
+    <link
+      class="skin"
+      rel="stylesheet"
+      type="text/css"
+      href="assets/pages/css/color/color-1.css"
+    />
+
+    <!-- REVOLUTION SLIDER CSS ============================================= -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="assets/pages/vendors/revolution/css/layers.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="assets/pages/vendors/revolution/css/settings.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="assets/pages/vendors/revolution/css/navigation.css"
+    />
+    <!-- REVOLUTION SLIDER END -->
+  </head>
+  <body class="ttr-opened-sidebar ttr-pinned-sidebar">
+    <app-root></app-root>
+    <!-- External JavaScripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/vendors/bootstrap/js/popper.min.js"></script>
+    <script src="assets/vendors/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/vendors/bootstrap-select/bootstrap-select.min.js"></script>
+    <script src="assets/vendors/bootstrap-touchspin/jquery.bootstrap-touchspin.js"></script>
+    <script src="assets/vendors/magnific-popup/magnific-popup.js"></script>
+    <script src="assets/vendors/counter/waypoints-min.js"></script>
+    <script src="assets/vendors/counter/counterup.min.js"></script>
+    <script src="assets/vendors/imagesloaded/imagesloaded.js"></script>
+    <script src="assets/vendors/masonry/masonry.js"></script>
+    <script src="assets/vendors/masonry/filter.js"></script>
+    <script src="assets/vendors/owl-carousel/owl.carousel.js"></script>
+    <script src="assets/vendors/scroll/scrollbar.min.js"></script>
+    <script src="assets/js/functions.js"></script>
+    <script src="assets/vendors/chart/chart.min.js"></script>
+    <script src="assets/js/admin.js"></script>
+    <script src="assets/vendors/calendar/moment.min.js"></script>
+    <script src="assets/vendors/calendar/fullcalendar.js"></script>
+    <script src="assets/vendors/switcher/switcher.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#calendar").fullCalendar({
+          header: {
+            left: "prev,next today",
+            center: "title",
+            right: "month,agendaWeek,agendaDay,listWeek",
+          },
+          defaultDate: "2019-03-12",
+          navLinks: true, // can click day/week names to navigate views
+
+          weekNumbers: true,
+          weekNumbersWithinDays: true,
+          weekNumberCalculation: "ISO",
+
+          editable: true,
+          eventLimit: true, // allow "more" link when too many events
+          events: [
+            {
+              title: "All Day Event",
+              start: "2019-03-01",
+            },
+            {
+              title: "Long Event",
+              start: "2019-03-07",
+              end: "2019-03-10",
+            },
+            {
+              id: 999,
+              title: "Repeating Event",
+              start: "2019-03-09T16:00:00",
+            },
+            {
+              id: 999,
+              title: "Repeating Event",
+              start: "2019-03-16T16:00:00",
+            },
+            {
+              title: "Conference",
+              start: "2019-03-11",
+              end: "2019-03-13",
+            },
+            {
+              title: "Meeting",
+              start: "2019-03-12T10:30:00",
+              end: "2019-03-12T12:30:00",
+            },
+            {
+              title: "Lunch",
+              start: "2019-03-12T12:00:00",
+            },
+            {
+              title: "Meeting",
+              start: "2019-03-12T14:30:00",
+            },
+            {
+              title: "Happy Hour",
+              start: "2019-03-12T17:30:00",
+            },
+            {
+              title: "Dinner",
+              start: "2019-03-12T20:00:00",
+            },
+            {
+              title: "Birthday Party",
+              start: "2019-03-13T07:00:00",
+            },
+            {
+              title: "Click for Google",
+              url: "http://google.com/",
+              start: "2019-03-28",
+            },
+          ],
+        });
+      });
+    </script>
+    <!-- <script src="assets/pages/js/jquery.min.js"></script> -->
+    <script src="assets/pages/vendors/bootstrap/js/popper.min.js"></script>
+    <script src="assets/pages/vendors/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/pages/vendors/bootstrap-select/bootstrap-select.min.js"></script>
+    <script src="assets/pages/vendors/bootstrap-touchspin/jquery.bootstrap-touchspin.js"></script>
+    <script src="assets/pages/vendors/magnific-popup/magnific-popup.js"></script>
+    <script src="assets/pages/vendors/counter/waypoints-min.js"></script>
+    <script src="assets/pages/vendors/counter/counterup.min.js"></script>
+    <script src="assets/pages/vendors/imagesloaded/imagesloaded.js"></script>
+    <script src="assets/pages/vendors/masonry/masonry.js"></script>
+    <script src="assets/pages/vendors/masonry/filter.js"></script>
+    <script src="assets/pages/vendors/owl-carousel/owl.carousel.js"></script>
+    <script src="assets/pages/js/functions.js"></script>
+    <script src="assets/pages/js/contact.js"></script>
+    <script src="assets/pages/vendors/switcher/switcher.js"></script>
+    <!-- Revolution JavaScripts Files -->
+    <script src="assets/pages/vendors/revolution/js/jquery.themepunch.tools.min.js"></script>
+    <script src="assets/pages/vendors/revolution/js/jquery.themepunch.revolution.min.js"></script>
+    <!-- Slider revolution 5.0 Extensions  (Load Extensions only on Local File Systems !  The following part can be removed on Server for On Demand Loading) -->
+    <script src="assets/pages/vendors/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+    <script src="assets/pages/vendors/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+    <script src="assets/pages/vendors/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+    <script src="assets/pages/vendors/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script src="assets/pages/vendors/revolution/js/extensions/revolution.extension.migration.min.js"></script>
+    <script src="assets/pages/vendors/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+    <script src="assets/pages/vendors/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+    <script src="assets/pages/vendors/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+    <script src="assets/pages/vendors/revolution/js/extensions/revolution.extension.video.min.js"></script>
+    <script>
+      jQuery(document).ready(function () {
+        var ttrevapi;
+        var tpj = jQuery;
+        if (tpj("#rev_slider_486_1").revolution == undefined) {
+          revslider_showDoubleJqueryError("#rev_slider_486_1");
+        } else {
+          ttrevapi = tpj("#rev_slider_486_1")
+            .show()
+            .revolution({
+              sliderType: "standard",
+              jsFileLocation: "assets/vendors/revolution/js/",
+              sliderLayout: "fullwidth",
+              dottedOverlay: "none",
+              delay: 9000,
+              navigation: {
+                keyboardNavigation: "on",
+                keyboard_direction: "horizontal",
+                mouseScrollNavigation: "off",
+                mouseScrollReverse: "default",
+                onHoverStop: "on",
+                touch: {
+                  touchenabled: "on",
+                  swipe_threshold: 75,
+                  swipe_min_touches: 1,
+                  swipe_direction: "horizontal",
+                  drag_block_vertical: false,
+                },
+                arrows: {
+                  style: "uranus",
+                  enable: true,
+                  hide_onmobile: false,
+                  hide_onleave: false,
+                  tmp: "",
+                  left: {
+                    h_align: "left",
+                    v_align: "center",
+                    h_offset: 10,
+                    v_offset: 0,
+                  },
+                  right: {
+                    h_align: "right",
+                    v_align: "center",
+                    h_offset: 10,
+                    v_offset: 0,
+                  },
+                },
+              },
+              viewPort: {
+                enable: true,
+                outof: "pause",
+                visible_area: "80%",
+                presize: false,
+              },
+              responsiveLevels: [1240, 1024, 778, 480],
+              visibilityLevels: [1240, 1024, 778, 480],
+              gridwidth: [1240, 1024, 778, 480],
+              gridheight: [768, 600, 600, 600],
+              lazyType: "none",
+              parallax: {
+                type: "scroll",
+                origo: "enterpoint",
+                speed: 400,
+                levels: [
+                  5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 46, 47, 48, 49, 50, 55,
+                ],
+                type: "scroll",
+              },
+              shadow: 0,
+              spinner: "off",
+              stopLoop: "off",
+              stopAfterLoops: -1,
+              stopAtSlide: -1,
+              shuffle: "off",
+              autoHeight: "off",
+              hideThumbsOnMobile: "off",
+              hideSliderAtLimit: 0,
+              hideCaptionAtLimit: 0,
+              hideAllCaptionAtLilmit: 0,
+              debugMode: false,
+              fallbacks: {
+                simplifyAll: "off",
+                nextSlideOnWindowFocus: "off",
+                disableFocusListener: false,
+              },
+            });
+        }
+      });
+    </script>
+  </body>
 </html>
